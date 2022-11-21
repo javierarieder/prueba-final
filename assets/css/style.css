@@ -1,12 +1,46 @@
-nav .collapse {
-    justify-content: flex-end;
+* {
+    padding: 0;
+    margin: 0;
 }
 
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+nav .collapse {
+    justify-content: flex-end !important;
+}
+
+.nav-wrapper {
+    position: sticky !important;
+    top: 0px;
+    z-index: 100000;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+.navegacion.scrolled {
+    background-color: #202020;
+}
 
 #quienes-somos {
     background-color: #252525;
     color: white;
 }
+#quienes-somos .col p {
+    text-align: start !important;
+}
+
+.icono {
+    background-color: #0b8288;
+    color: white;
+    text-align: center
+}
+
 h4 {
     text-align: center
 }
@@ -18,10 +52,16 @@ h4 {
 
 .card {
     background-color: #0b8288;
+    font-weight: 300;
 }
+
+.card-text {
+    text-align: start;
+}
+
 .card-img-top {
     width: 100%;
-    height: 7vw;
+    height: 8vw;
     object-fit: cover;
 }
 #contacto {
@@ -30,8 +70,9 @@ h4 {
 }
 
 #formulario {
-    max-width: 1200px !important;
+    max-width: 1250px !important;
     margin: auto;
+    font-weight: 300;
 }
 
 .btn-enviar {
@@ -42,17 +83,107 @@ h4 {
     background-color: #0b8288 !important;
 }
 
-#footer {
+.modalCenter {
+    color: #0b8288 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+
+.boton-sub {
     background-color: #0b8288;
     color: white;
 }
+
+.boton-cancel {
+    background-color: #abb2b6;
+    color: white;
+}
+
+#footer {
+    vertical-align: auto;
+    background-color: #0b8288;
+    color: white;
+}
+h3 {
+    margin-bottom: 0;
+
+    font-weight: 300;
+}
+
 ul li {
     list-style: none;
     text-decoration: none;
-    margin: 0 1em;
     display: inline-block;
     vertical-align: middle;
 }
+
+a {
+    color: white !important;
+    text-decoration: none !important;
+    font-size: x-large ;
+}
+
 footer i {
     margin: 0 0.25em 0.5em 0.25em;
   }
+
+  @media
+(prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+  @media only screen and (max-width: 425px) {
+    .card-img-top {
+        height: 45vw;
+    }
+  }
+
+  @media only screen and (min-width: 426px) and (max-width: 768px) {
+    .card-img-top {
+        height: 25vw;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .card {
+        margin-bottom: 40px;
+    }
+  }
+  @media only screen and (min-width: 769px) {
+    .card-text {
+        padding-bottom: 20px;
+    }
+  }
+
+  @media only screen and (min-width: 769px) {
+    .card-text {
+        padding-top: 10px;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    .card-body {
+        height: 30vw;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    #tarjetas {
+        padding-bottom: 0px !important;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    #formulario {
+        max-width: 800px !important;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    ol, ul {
+        padding-left: 0rem;
+    }
+  }
+
